@@ -1,5 +1,4 @@
-var counter = 0;
-
+const allEmployees= [];
 function Employee(fullName, department, level, img){
     this.fullName = fullName;
     this.department = department;
@@ -7,15 +6,24 @@ function Employee(fullName, department, level, img){
     this.img = img;
     this.employeeID = IDGenerator();
     this.salary = salaryGenerator(level)
+    allEmployees.push(this);
 }
 
-const employee1 = new Employee("Ghazi Samer", "Administration", "Senior", "./ghazi.jpg");
-const employee2 = new Employee("Lana Ali", "Finance", "Senior", "./lana.jpg");
-const employee3 = new Employee("Tamara Ayoub", "Marketing", "Senior", "./tamara.jpg");
-const employee4 = new Employee("Safi Walid", "Administration", "Mid-Senior", "./safi.jpg");
-const employee5 = new Employee("Omar Zaid", "Development", "Senior", "./omar.jpg");
-const employee6 = new Employee("Rana Saleh", "Development", "Junior", "./rana.jpg");
-const employee7 = new Employee("Hadi Ahmad", "Finance", "Mid-Senior", "./hadi.jpg");
+const employee1 = new Employee("Ghazi Samer", "Administration", "Senior", "./assets/ghazi.jpg");
+const employee2 = new Employee("Lana Ali", "Finance", "Senior", "./assets/lana.jpg");
+const employee3 = new Employee("Tamara Ayoub", "Marketing", "Senior", "./assets/tamara.jpg");
+const employee4 = new Employee("Safi Walid", "Administration", "Mid-Senior", "./assets/safi.jpg");
+const employee5 = new Employee("Omar Zaid", "Development", "Senior", "./assets/omar.jpg");
+const employee6 = new Employee("Rana Saleh", "Development", "Junior", "./assets/rana.jpg");
+const employee7 = new Employee("Hadi Ahmad", "Finance", "Mid-Senior", "./assets/hadi.jpg");
+
+Employee.prototype.printMenu = function () {
+    document.write(`Employee name : ${this.fullName}`)
+    document.write(`Department : ${this.department}`)
+    document.write(`Employee salary: ${this.salary}`)
+    
+    
+}
 
 console.log("Employee name: " + employee1.fullName + "\n" + "Employee salary: " + employee1.salary);
 console.log("Employee name: " + employee2.fullName + "\n" + "Employee salary: " + employee2.salary);
@@ -24,6 +32,9 @@ console.log("Employee name: " + employee4.fullName + "\n" + "Employee salary: " 
 console.log("Employee name: " + employee5.fullName + "\n" + "Employee salary: " + employee5.salary);
 console.log("Employee name: " + employee6.fullName + "\n" + "Employee salary: " + employee6.salary);
 console.log("Employee name: " + employee7.fullName + "\n" + "Employee salary: " + employee7.salary);
+
+var counter = 1000;
+
 
 function IDGenerator(){
     return counter++ ;
