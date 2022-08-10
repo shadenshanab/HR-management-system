@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: 'BioRhyme';
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+header{
+    width: 100%;
+    padding: 20px 10px;
+    position: absolute;
+    align-items: center;
+    justify-content:right;
+}
+.navbar{
+    display: block;
+
+    list-style: none;
+    display: flex;
+    margin: 0 20px;
+    gap: 20px;
+
+}
+.navbar li a{
+    font-size: x-large;
+    text-decoration:none;
+    color: #9CB4CC;
+    text-transform: uppercase;
+    display: block;
+    padding: 8px 16px;
+}
+.navbar li a:hover{
+    text-decoration:underline;
+
+}
+.logo{
+    height: auto;
+    width: 230px;
+}
+
+section{
+
+
+}
+main{
+    background: scroll;
+    margin: 25px;
+    padding: 70px;
+}
+
+
+footer{
+    color: #748DA6;
+    text-align: center;
+    position: fixed;
+    margin: 20px;
+    bottom:0;
+}
