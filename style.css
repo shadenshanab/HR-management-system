@@ -6,6 +6,7 @@
     box-sizing: border-box;
     outline: none;
     border: none;
+
 }
 header{
     width: 100%;
@@ -19,8 +20,9 @@ header{
 
     list-style: none;
     display: flex;
-    margin: 0 20px;
+    margin: 20px 35px;
     gap: 20px;
+    justify-content: space-between;
 
 }
 .navbar li a{
@@ -40,16 +42,48 @@ header{
     width: 230px;
 }
 
-section{
-
-
-}
 main{
     background: scroll;
     margin: 25px;
     padding: 70px;
 }
 
+.flex-container {
+    display: flex;
+    flex-wrap:wrap;
+    border-radius: 20px;
+    width: 70%;
+    background-color: #F2D7D9;
+    justify-content: center;
+    gap:100px;
+    padding: 25px;
+
+}
+  
+  .flex-container > div {
+    border-radius: 20px;
+    background-color: #D3CEDF;
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    justify-content: center;
+
+
+}
+.flex-container > div > img {
+    border-radius: 20px;
+    height: 150px;
+    width: 200px;
+    justify-self: center;
+}
+.flex-container > div > p{
+    background-color: transparent;
+    color: #617f9d;
+    text-align: center;
+}
+.flex-container > div > p:hover{
+    background-color:#F2D7D9;
+}
 
 footer{
     color: #748DA6;
@@ -57,4 +91,9 @@ footer{
     position: fixed;
     margin: 20px;
     bottom:0;
+    background-color: transparent;
+}
+footer > h5{
+    background-color: #F2D7D9;
+    border-radius: 20px;
 }

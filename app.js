@@ -17,9 +17,12 @@ const employee6 = new Employee("Rana Saleh", "Development", "Junior", "./assets/
 const employee7 = new Employee("Hadi Ahmad", "Finance", "Mid-Senior", "./assets/hadi.jpg");
 
 Employee.prototype.printMenu = function () {
+    document.write(`<div>`)
+    document.write(`<img src='${this.img}'>`)	
     document.write(`<p>Employee name : ${this.fullName}</p>`)
     document.write(`<p>Department : ${this.department}</p>`)
     document.write(`<p>Employee salary: ${this.salary}</p>`)
+	document.write(`</div>`)	
 }
 
  console.log("Employee name: " + employee1.fullName + "\n" + "Employee salary: " + employee1.salary);
